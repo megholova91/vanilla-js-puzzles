@@ -62,10 +62,3 @@ function countDown() {
 }
 
 countDown();
-
-window.addEventListener("onunload", function cleanup() {
-  document.getElementById("count-input").removeEventListener("change");
-  document.getElementById("start-btn").removeEventListener("click");
-  document.getElementById("stop-btn").removeEventListener("click");
-  document.getElementById("reset-btn").removeEventListener("click");
-});
