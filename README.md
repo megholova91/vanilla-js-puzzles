@@ -7,3 +7,5 @@ Collection of fun projects written in vanilla JS
 5. Loading bar
 6. Memory game
 7. Pixel art
+
+https://js-puzzles.netlify.app/ 
