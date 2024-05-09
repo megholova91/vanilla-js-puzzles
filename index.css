@@ -1,0 +1,27 @@
+body  {
+    margin: 5em 10em;
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.puzzle {
+    height: 300px;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.puzzle:hover {
+    transform: scale(1.05);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}

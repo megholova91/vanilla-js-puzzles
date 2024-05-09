@@ -10,7 +10,7 @@ function countDown() {
   const input = document.getElementById("count-input");
   const error = document.getElementById("error");
 
-  input.addEventListener("change", function updateCounter(evt) {
+  input.addEventListener("input", function updateCounter(evt) {
     const inputCount = evt.target.value;
     if (inputCount > 0) {
       counter.textContent = evt.target.value;
