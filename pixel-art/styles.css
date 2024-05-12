@@ -12,12 +12,12 @@ body {
 }
 
 .row, #color-palette {
-    height: 50px;
+    height: 3rem;
     display: flex;
 }
 
 .cell {
-    width: 50px;
+    width: 3rem;
     border: 1px solid grey;
 }
 
@@ -28,4 +28,21 @@ body {
 
 .color-cell {
     cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+@media (max-width: 600px) {
+    .row, #color-palette {
+        height: 2rem;
+    }
+    .cell {
+        width: 2rem;
+    }
 }
