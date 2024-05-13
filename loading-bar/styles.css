@@ -8,7 +8,7 @@ body {
 
 #progress-bar {
     height: 30px;
-    width: 500px;
+    width: 80%;
     background: lightgrey;
 }
 
@@ -18,9 +18,18 @@ body {
     background: blue;
 }
 
-.footer {
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.queue-count-container {
+    margin: 1rem auto;
+}
+
+#load-button {
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #27687c;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
 }
