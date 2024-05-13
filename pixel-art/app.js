@@ -5,27 +5,29 @@
   const colors = [];
   let selectedColor = "";
 
-  for (let row = 0; row < 10; row++) {
-    const rowNode = document.createElement("div");
-    rowNode.classList.add("row");
-    for (let col = 0; col < 10; col++) {
-      const cell = document.createElement("div");
-      cell.classList.add("cell");
-      cell.setAttribute("data-cell", true);
-      rowNode.appendChild(cell);
+  const createGrid = () => {
+    for (let row = 0; row < 10; row++) {
+      const rowNode = document.createElement("div");
+      rowNode.classList.add("row");
+      for (let col = 0; col < 10; col++) {
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.dataset.cell = true;
+        rowNode.appendChild(cell);
+      }
+      gridContainer.appendChild(rowNode);
     }
-    gridContainer.appendChild(rowNode);
-  }
 
-  for (let count = 0; count < 10; count++) {
-    const colorCell = document.createElement("div");
-    colorCell.classList.add("cell", "color-cell");
-    const color = generateRandomColor();
-    colorCell.style.background = color;
-    colorCell.setAttribute("data-color", color);
-    colors.push(color);
-    colorPalette.appendChild(colorCell);
-  }
+    for (let count = 0; count < 10; count++) {
+      const colorCell = document.createElement("div");
+      colorCell.classList.add("cell", "color-cell");
+      const color = generateRandomColor();
+      colorCell.style.background = color;
+      colorCell.dataset.color = color;
+      colors.push(color);
+      colorPalette.appendChild(colorCell);
+    }
+  };
 
   colorPalette.addEventListener("click", (event) => {
     const item = event.target;
@@ -49,4 +51,6 @@
     } while (colors.indexOf(newColor) > -1);
     return newColor;
   }
+
+  createGrid();
 })();
