@@ -8,7 +8,7 @@ body {
 
 .score-container {
     display: flex;
-    width: 400px;
+    width: 20rem;
     justify-content: space-between;
 }
 
@@ -17,10 +17,12 @@ body {
     height: 100px;
     border: 1px solid;
     background: lightgray;
+    width: 20rem;
+    display: flex;
 }
 
 .block {
-    width: 80px;
+    flex: 1;
     border: 1px solid;
     cursor: pointer;
 }
@@ -46,5 +48,42 @@ body {
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: 600;
+    margin: 1rem;
+}
+
+ul {
+    margin: 0.5rem;
+}
+
+#start-button {
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #27687c;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#start-button:disabled {
+    background: lightgray;
+    cursor: auto;
+}
+
+@media (min-width: 600px) {
+    .score-container,
+    #blocks-container {
+        width: 30rem;
     }
 }
